@@ -1,0 +1,62 @@
+{
+  "name": "country-names-translator",
+  "description": "I'm a lazy",
+  "homepage": "https://documentup.com/Tommytrg/country-names-translator",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": {
+    "email": "tomastrg22@gmail.com",
+    "name": "Tomas",
+    "url": "https://tommytrg.github.io/my-personal-site/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tommytrg/country-names-translator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tommytrg/country-names-translator/issues"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "latest",
+    "eslint": "^4.5.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "git-dirty": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "mocha": "latest",
+    "nyc": "latest",
+    "prettier-standard": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard-markdown && standard",
+    "precommit": "lint-staged",
+    "precommit-lint": "prettier-standard --single-quote",
+    "prelint": "npm run pretty",
+    "pretest": "npm run lint",
+    "pretty": "prettier-standard --single-quote {core,test,bin}/**/*.js",
+    "test": "nyc mocha"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "git add",
+      "precommit-lint"
+    ]
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}
