@@ -17,7 +17,10 @@
     "url": "https://github.com/Tommytrg/country-names-translator/issues"
   },
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "yandex-translate-api-wrapper": "^1.0.0"
+  },
   "devDependencies": {
     "coveralls": "latest",
     "eslint": "^4.5.0",
