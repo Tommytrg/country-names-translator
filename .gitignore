@@ -18,7 +18,9 @@ npm-debug.log
 .idea
 *sublime*
 nbproject
-
+.editorconfig
+.eslintrc.json
+.gitattributes
 ############################
 # Tests
 ############################
@@ -30,3 +32,4 @@ coverage
 # Other
 ############################
 .node_history
+.env
